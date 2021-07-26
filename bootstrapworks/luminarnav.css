@@ -1,0 +1,41 @@
+body{
+    height: 2000px;
+}
+
+.nav-item a:hover{
+    background-color: rgb(73, 135, 172);
+
+}
+
+.row h2{
+    color: #5e068a
+}
+
+/* h2 span:nth-child(1){
+    color: ;
+} */
+
+
+.btn-learn{
+    padding: 16px 27px;
+    font-weight: 600;
+    margin-top: 21px;
+    border-radius: 50px;
+    background-color: #5e068a;
+    color: white
+}
+
+.btn-learn:hover{
+    background-color: white;
+    color: #5e068a;
+    border-color: #5e068a;
+}
+
+.mlabel{
+    margin-left: 100px;
+}
+
+.carousel-item img{
+    height: 400px;
+
+}

@@ -1,0 +1,25 @@
+h1{
+    color: tomato;
+    text-align: center;
+    text-decoration: underline;
+}
+body{
+    background-color: black;
+}
+
+#second{
+    color: #86ba94;
+    text-decoration: none;
+}
+
+.cls{
+    color: #9210a1;
+}
+
+#clr{
+    color: rgb(37, 73, 156);
+}
+
+h2{
+   color: hsl(217, 35, 18); 
+}

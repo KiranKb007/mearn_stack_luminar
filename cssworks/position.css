@@ -1,0 +1,94 @@
+.row{
+    width: 520px;
+    height: 125px;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    position: relative;
+    left: 25%;  
+    margin-top: 20px;
+}
+
+.col{
+    width: 100px;
+    height: 123px;
+}
+
+.col-1{
+    background-color: rgb(173, 68, 129);
+    position: absolute;
+} 
+
+.col-2{
+    background-color: rgb(99, 47, 47);
+    position: absolute;
+    left: 105px;
+}
+
+.col-3{
+    background-color: rgb(58, 133, 133);
+    position: absolute;
+    left: 210px;
+}
+
+.col-4{
+    background-color: rgb(48, 63, 36);
+    position: absolute;
+    left: 315px;
+}
+
+.col-5{
+    background-color: rgb(143, 77, 77);
+    position: absolute;
+    left: 420px;
+}
+
+.row-2{
+    width: 730px;
+    height: 125px;
+    background-color: burlywood;
+    border: 1px solid black;
+    position: absolute;
+    left: 18%;
+    margin-top: 10px;
+}
+
+.col-6{
+    background-color: rgb(49, 97, 52);
+    position: absolute;
+}
+
+.col-7{
+    background-color: rgb(173, 68, 129);
+    position: absolute;
+    left: 105px;
+}
+
+.col-8{
+    background-color: rgb(99, 47, 47);
+    position: absolute;
+    left: 210px;
+}
+
+.col-9{
+    background-color: rgb(58, 133, 133);
+    position: absolute;
+    left: 315px;
+}
+
+.col-10{
+    background-color: rgb(48, 63, 36);
+    position: absolute;
+    left: 420px;
+}
+
+.col-11{
+    background-color: rgb(143, 77, 77);
+    position: absolute;
+    left: 525px;
+}
+
+.col-12{
+    background-color: rgb(143, 77, 77);
+    position: absolute;
+    left: 630px;
+}

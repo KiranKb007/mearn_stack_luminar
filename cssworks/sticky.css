@@ -1,0 +1,19 @@
+.hello{
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    margin: 1px solid black;
+    position: sticky;
+    top: 0%;
+    left: 60%;
+}
+
+.world{
+    width: 100px;
+    height: 100px;
+    background-color: darkgray;
+    margin: 1px solid black;
+    position: fixed;
+    top: 30%;
+    left: 30%;
+}

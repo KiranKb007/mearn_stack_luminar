@@ -1,0 +1,20 @@
+div{
+    width: 30%;
+    height: 100px;
+    border: 1px solid black;
+}
+.section1{
+    background-color: blueviolet;
+    margin-left: 34%;
+    margin-top: 7%;
+    padding: 1% ;
+    position: absolute;
+}
+
+.section2{
+    background-color: cornflowerblue;
+    margin-left: 34%;
+    margin-top: 14%;
+    padding: 1%;
+    position: absolute;
+}

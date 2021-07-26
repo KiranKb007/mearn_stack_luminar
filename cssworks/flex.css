@@ -1,0 +1,30 @@
+.row{
+    width: 90%;
+    height: 400px;
+    background-color: rgb(206, 221, 139);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.col{
+    width: 100px;
+    height: 123px;
+}
+
+.col-1{
+    flex: 1;
+}
+
+.col-2{
+    flex: 1;
+}
+
+.col-3{
+    flex: 1;
+}
+
+.col-4{
+    flex: 1;
+}
