@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <!-- <input type="text" id="c_name" class="form-control mt-5"> -->
+                <select onclick="getCountryDetails()" id="c_name" class="form-select" aria-label="Default select example">
+                    <option selected>-select-country-</option>
+
+                </select>
+                <button onclick="getCountryDetails()" class="btn btn-success mt-2">Fetch Data</button>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4" id="data"></div>
+            <div class="col-4"></div>
+        </div>
+
+
+    </div>
+
+</body>
+
+<script>
+    dropDown()
+    function displayValue(countryData) {
+        let flag = countryData[0].flag;
+        let population = countryData[0].population;
+        let currency = countryData[0].currencies[0].name;
+        let symbol = countryData[0].currencies[0].symbol;
+        let html_data =
+            `<div class="card" style="width: 18rem;">
+        <img src="${flag}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Country Name: ${countryData[0].name}</<h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Population: ${population}</li>
+            <li class="list-group-item">Currency: ${currency}</li>
+            <li class="list-group-item">CurrencySymbol: ${symbol}</li>
+        </ul>
+        </div>`
+        data.innerHTML = html_data;
+    }
+
+    function getCountryDetails() {
+        let countryName = c_name.value;
+    //     let url = `https://restcountries.eu/rest/v2/name/${countryName}?fullText=true`;
+    //     let request = new XMLHttpRequest()
+    //     request.open("get", url)
+    //     request.send()
+    //     request.onreadystatechange = () => {
+    //         if (request.readyState == 4) {
+    //             if (request.status > 199 & request.status < 300) {
+    //                 let countryData = JSON.parse(request.responseText)
+    //                 console.log(countryData);
+    //                 displayValue(countryData);
+    //             }
+    //         }
+    //     }
+    fetch("https://restcountries.eu/rest/v2/name/${countryName}?fullText=true").
+    then(country=>country.json()).
+    then(data=>dropDownOptions(data)).catch(error=>alert("error"))
+    }
+
+    function dropDown() {
+        let url = `https://restcountries.eu/rest/v2/all`
+        let request = new XMLHttpRequest()
+        request.open("get", url)
+        request.send()
+        request.onreadystatechange = () => {
+            if (request.readyState == 4) {
+                if (request.status > 199 & request.status < 300) {
+                    let countryData = JSON.parse(request.responseText)
+                    dropDownOptions(countryData);
+                }
+            }
+        }
+    }
+
+    function dropDownOptions(countryData){
+        html_data="";
+        for(let c_names of countryData){
+            html_data+=`<option value="${c_names.name}">${c_names.name}</option>`
+        }
+        c_name.innerHTML=html_data;
+    }
+
+
+
+
+</script>
+
+</html>

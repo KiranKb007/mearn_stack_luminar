@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="./bankscript.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+            .icon{
+                width: 100px;
+                height: 100px;
+            }
+    
+            #heading_line{
+                font-family: 'Lobster', cursive;
+                font-size: 50px ;
+                color: rgb(194, 78, 78);
+            }
+
+            .userhome_image{
+                width: 700px;
+                height: 450px;
+            }
+
+            #heading_services{
+                text-align: center;
+                font-size: 30px;
+                color:rgb(41, 77, 44);
+                margin-bottom: 40px;
+                margin-top: 30px;
+
+            }
+
+            body{
+                background-image: url("./backgroundimage.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+            ul{
+                margin: 15px;
+        
+            }
+            #anchor_tag{
+                text-decoration: none;
+                color: rgb(44, 34, 49);
+            }
+
+        </style>
+        
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg" style="margin-top: -8px;">
+        <div class="container-fluid" style="background-color: #acaa32;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <span class="ms-5" style="color: white;">Customer Care Contact:+91 8534XXXXXX
+                        <a href="" style="color: white; text-decoration: none;">goldcoinbank.com</a>
+                    </span>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item">
+                    <a class="nav-link me-5" aria-current="page" href="#" style="color: blue;"><span id="user">USER:</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand"  id="heading_line" href="#"><img class="icon" src="goldcoin.jpg"
+                    alt="">GOLDCOIN BANK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><strong>HOME</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><strong>ABOUT</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><strong>SERVICES</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><strong>FAQS</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><strong>INTERNET BANKING</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><strong>CONTACT</strong></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-danger nav-link" href="banklogin.html" onclick="bank.loggingout()">LogOut</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h2 class="mt-3">Welcome To Your Account!</h2>
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-6">
+            <img src="home_image.jpg" class="userhome_image mt-4" alt="">
+        </div>
+        <div class="col-6">
+            <div></div>
+            <div class="" id="">
+                <ul class="">
+                    <div id="heading_services">SERVICES</div>
+                    <li class="">
+                        <a id=anchor_tag class="d-flex justify-content-between mb-1" aria-current="page" href="#">Home Page</a>
+                    </li>
+                    <li class="">
+                        <a id=anchor_tag class="d-flex justify-content-between mb-1" aria-current="page" onclick="bank.balEnquiry()" href="#">Balance Enquiry</a>
+                    </li>
+                    <li class="">
+                        <a id=anchor_tag class="d-flex justify-content-between mb-1" data-bs-toggle="modal" aria-disabled="true"
+                            href="#exampleModal">Fund Transfer</a>
+                    </li>
+                    <li>
+                        <a id=anchor_tag href="#" class="mb-1">Internet Banking</a>
+                    </li>
+                    <li>
+                        <a id=anchor_tag href="#" class="mb-1">Insurance</a>
+                    </li>
+                    <li>
+                        <a id=anchor_tag href="#" class="mb-1">Wealth Management</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+    
+    
+    
+    
+    
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Transfer Amount</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" name="" id="toacno" class="form-control mb-2" placeholder="TO ACCOUNT NUMBER">
+                        <input type="text" name="" id="amt" class="form-control" placeholder="ENTER AMOUNT">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="bank.fundTransfer()">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+</body>
+
+<script>
+    let logeduser = JSON.parse(sessionStorage.getItem(sessionStorage.key(0)))
+    // console.log(logeduser);
+    user.innerHTML = logeduser.account_number
+</script>
+
+</html>
